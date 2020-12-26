@@ -1,10 +1,13 @@
 import './App.css';
 
+import Card from './components/card/card.component';
+
 function App() {
   return (
-    <div className="App">
+    <section className="container">
       Welcome to Birthday Reminder
-    </div>
+      <Card />
+    </section>
   );
 }
 
