@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './card.style.css';
 
+import {ListItem} from './../list-item/list-item.component';
+
 
 export default class Card extends Component {
 
@@ -46,10 +48,10 @@ export default class Card extends Component {
     render() {
         return (
         <div className="card">
-            <h3> 5 Birthday today</h3>
+            <h3> {this.state.birthdays.length} Birthday today</h3>
             {
                 this.state.birthdays.map(({id, ...otherData}) =>
-                    <h1 key={id}>Hello</h1>
+                    <ListItem key={id} {...otherData}/>
                 )
             }
         </div>
